@@ -1,0 +1,868 @@
+Partie 1
+
+Exercice 1
+
+A ← 1        
+B ← A + 3     
+A ← 3   
+
+La valeur des variables est 
+
+A = 3         
+B = 4
+
+Exercice 2
+
+Variables A, B, C en Entier
+Début
+A ← 5
+B ← 3
+C ← A + B
+A ← 2
+C ← B – A
+Fin
+
+La valeur des variables est
+
+A = 2         
+B = 3          
+C = 1
+
+Exercice 3
+
+Variables A, B en Entier
+Début
+A ← 5
+B ← A + 4
+A ← A + 1
+B ← A – 4
+Fin
+
+La valeur des variables est
+
+A = 6         
+B = 2
+
+Exercice 4
+
+Variables A, B, C en Entier
+Début
+ A ← 3
+B ← 10
+C ← A + B
+B ← A + B
+A ← C
+Fin
+
+La valeur des variables est
+
+A = 13         
+B = 13         
+C = 13
+
+Exercice 5
+
+Variables A, B en Entier
+Début
+A ← 5
+B ← 2
+A ← B
+B ← A
+Fin
+
+La valeur des variables est
+
+A = 2         
+B = 2
+
+Exercice 6
+
+Plus difficile, mais c’est un classique absolu, qu’il faut absolument maîtriser : 
+écrire un algorithme permettant d’échanger les valeurs de deux variables A et B,
+et ce quel que soit leur contenu préalable.
+
+Début
+C ← A
+A ← B
+B ← C
+Fin
+
+Exercice 7
+
+Une variante du précédent : on dispose de trois variables A, B et C. 
+Ecrivez un algorithme transférant à B la valeur de A, à C la valeur de B et à A la valeur de C 
+(toujours quels que soient les contenus préalables de ces variables).
+
+Début
+D ← C
+C ← B
+B ← A
+A ← D
+Fin 
+
+Exercice 8
+
+Que produit l’algorithme suivant ?
+
+Variables A, B, C en Caractères
+Début
+A ← "423"
+B ← "12"
+C ← A + B
+Fin
+
+L'algorithme produit une erreur d’exécution, puisqu’on ne peut pas additionner des caractères.
+
+Exercice 9
+
+Que produit l’algorithme suivant ?
+
+Variables A, B, C en Caractères
+Début
+A ← "423"
+B ← "12"
+C ← A & B
+Fin
+
+On peut les concaténer. A la fin de l’algorithme, C vaudra donc  "42312".
+
+
+Partie 2
+
+Exercice 1
+
+Quel résultat produit le programme suivant ?
+
+Variables val, double numériques
+Début
+Val ← 231
+Double ← Val * 2
+Ecrire Val
+Ecrire Double
+Fin
+
+On verra apparaître à l’écran 231, puis 462 
+(qui vaut 231 * 2)
+
+Exercice 2
+
+Ecrire un programme qui demande un nombre à l’utilisateur, 
+puis qui calcule et  affiche le carré de ce nombre.
+
+Variables nb, carr en Entier
+
+Début
+Ecrire "Entrez un nombre :"
+Lire nb
+carr ← nb * nb
+Ecrire "Son carré est : ", carr
+Fin
+
+Exercice 3
+
+Ecrire un programme qui demande son prénom à l'utilisateur, 
+et qui lui réponde par un charmant « Bonjour » suivi du prénom. On aura ainsi le dialogue suivant :
+
+machine : Quel est votre prénom ?
+utilisateur : Marie-Cunégonde
+machine : Bonjour, Marie Cunégonde ! ».
+
+Variable prenom en Caractere
+
+Début
+Ecrire "Quel est votre prenom ?"
+Lire Prenom
+Ecrire "Bonjour ", Prenom, " !"
+Fin
+
+Exercice 4
+
+Ecrire un programme qui lit le prix HT d’un article, le nombre d’articles et le taux de TVA, 
+et qui fournit le prix total TTC correspondant. 
+Faire en sorte que des libellés apparaissent clairement.
+
+Variables nb, pht, ttva, pttc en Numérique
+Début
+Ecrire "Entrez le prix hors taxes :"
+Lire pht
+Ecrire "Entrez le nombre d’articles :"
+Lire nb
+Ecrire "Entrez le taux de TVA :"
+Lire ttva
+pttc ← nb * pht * (1 + ttva)
+Ecrire "Le prix toutes taxes est : ", pttc
+Fin
+
+Partie 3
+
+Exercice 1
+
+Ecrire un algorithme qui demande un nombre à l’utilisateur, 
+et l’informe ensuite si ce nombre est positif ou négatif 
+(on laisse de côté le cas où le nombre vaut zéro).
+
+Variable n en Entier
+
+Début
+Ecrire "Entrez un nombre : "
+Lire n
+Si n > 0 Alors
+  Ecrire "Ce nombre est positif”
+Sinon
+  Ecrire "Ce nombre est négatif"
+Finsi
+Fin
+
+Exercice 2
+
+Ecrire un algorithme qui demande deux nombres à l’utilisateur et l’informe ensuite si leur produit 
+est négatif ou positif (on laisse de côté le cas où le produit est nul). 
+Attention toutefois : on ne doit pas calculer le produit des deux nombres.
+
+Variables m, n en Entier
+
+Début
+Ecrire "Entrez deux nombres : "
+Lire m, n
+Si (m > 0 ET n > 0) OU (m < 0 ET n < 0) Alors
+  Ecrire "Leur produit est positif"
+Sinon
+  Ecrire "Leur produit est négatif"
+Finsi
+Fin
+
+Exercice 3
+
+Ecrire un algorithme qui demande trois noms à l’utilisateur et l’informe ensuite s’ils sont rangés 
+ou non dans l’ordre alphabétique.
+
+Variables a, b, c en Caractère
+
+Début
+Ecrire "Entrez successivement trois noms : "
+Lire a, b, c
+Si a < b ET b < c Alors
+  Ecrire "Ces noms sont classés alphabétiquement"
+Sinon
+  Ecrire "Ces noms ne sont pas classés"
+Finsi
+Fin
+
+Exercice 4
+
+Ecrire un algorithme qui demande un nombre à l’utilisateur, 
+et l’informe ensuite si ce nombre est positif 
+ou négatif (on inclut cette fois le traitement du cas où le nombre vaut zéro).
+
+Variable n en Entier
+
+Début
+Ecrire "Entrez un nombre : "
+Lire n
+Si n < 0 Alors
+  Ecrire "Ce nombre est négatif"
+SinonSi n = 0 Alors
+  Ecrire "Ce nombre est nul"
+Sinon
+  Ecrire "Ce nombre est positif"
+Finsi
+Fin
+
+Exercice 5
+
+Ecrire un algorithme qui demande deux nombres à l’utilisateur 
+et l’informe ensuite si le produit est négatif ou positif 
+(on inclut cette fois le traitement du cas où le produit peut être nul). 
+Attention toutefois, on ne doit pas calculer le produit !
+
+Variables m, n en Entier
+
+Début
+Ecrire "Entrez deux nombres : "
+Lire m, n
+Si m = 0 OU n = 0 Alors
+  Ecrire "Le produit est nul"
+SinonSi (m < 0 ET n < 0) OU (m > 0 ET n > 0) Alors
+  Ecrire "Le produit est positif"
+Sinon
+  Ecrire "Le produit est négatif"
+Finsi
+Fin
+
+Exercice 6
+
+Ecrire un algorithme qui demande l’âge d’un enfant à l’utilisateur. 
+Ensuite, il l’informe de sa catégorie :
+
+"Poussin" de 6 à 7 ans
+"Pupille" de 8 à 9 ans
+"Minime" de 10 à 11 ans
+"Cadet" après 12 ans
+
+Peut-on concevoir plusieurs algorithmes équivalents menant à ce résultat ?
+
+Variable age en Entier
+
+Début
+Ecrire "Entrez l’âge de l’enfant : "
+Lire age
+Si age >= 12 Alors
+  Ecrire "Catégorie Cadet"
+SinonSi age >= 10 Alors
+  Ecrire "Catégorie Minime"
+SinonSi age >= 8 Alors
+  Ecrire "Catégorie Pupille"
+SinonSi age >= 6 Alors
+  Ecrire "Catégorie Poussin"
+Finsi
+Fin
+
+
+
+Partie 4
+
+Exercice 1
+
+Formulez un algorithme équivalent à l’algorithme suivant :
+
+Si Tutu > Toto + 4 OU Tata = "OK" Alors
+  Tutu ← Tutu + 1
+Sinon
+  Tutu ← Tutu – 1
+Finsi
+
+Si Tutu <= Toto + 4 ET Tata <> "OK" Alors
+  Tutu ← Tutu - 1
+Sinon
+  Tutu ← Tutu + 1
+Finsi
+
+Exercice 2
+
+Cet algorithme est destiné à prédire l'avenir, et il doit être infaillible !
+Il lira au clavier l’heure et les minutes, et il affichera l’heure qu’il sera une minute plus tard. 
+Par exemple, si l'utilisateur tape 21 puis 32, l'algorithme doit répondre :
+"Dans une minute, il sera 21 heure(s) 33".
+NB : on suppose que l'utilisateur entre une heure valide. Pas besoin donc de la vérifier.
+
+Variables h, m en Numérique
+
+Début
+Ecrire "Entrez les heures, puis les minutes : "
+Lire h, m
+m ← m + 1
+Si m = 60 Alors
+  m ← 0
+  h ← h + 1
+FinSi
+Si h = 24 Alors
+  h ← 0
+FinSi
+Ecrire "Dans une minute il sera ", h, "heure(s) ", m, "minute(s)"
+Fin
+
+Exercice 3
+
+De même que le précédent, cet algorithme doit demander une heure et en afficher une autre. 
+Mais cette fois, il doit gérer également les secondes, 
+et afficher l'heure qu'il sera une seconde plus tard.
+Par exemple, si l'utilisateur tape 21, puis 32, puis 8, l'algorithme doit répondre : 
+"Dans une seconde, il sera 21 heure(s), 32 minute(s) et 9 seconde(s)".
+NB : là encore, on suppose que l'utilisateur entre une date valide.
+
+
+Variables h, m, s en Numérique
+
+Début
+Ecrire "Entrez les heures, puis les minutes, puis les secondes : "
+Lire h, m, s
+s ← s + 1
+Si s = 60 Alors
+  s ← 0
+  m ← m + 1
+FinSi
+Si m = 60 Alors
+  m ← 0
+  h ← h + 1
+FinSi
+Si h = 24 Alors
+  h ← 0
+FinSi
+Ecrire "Dans une seconde il sera ", h, "h", m, "m et ", s, "s"
+Fin
+
+Exercice 4
+
+Un magasin de reprographie facture 0,10 E les dix premières photocopies, 
+0,09 E les vingt suivantes et 0,08 E au-delà. 
+Ecrivez un algorithme qui demande à l’utilisateur le nombre de photocopies effectuées 
+et qui affiche la facture correspondante.
+
+Variables n, p en Numérique
+
+Début
+Ecrire "Nombre de photocopies : "
+Lire n
+Si n <= 10 Alors
+  p ← n * 0,1
+SinonSi n <= 30 Alors
+  p ← 10 * 0,1 + (n – 10) * 0,09
+Sinon
+  p ← 10 * 0,1 + 20 * 0,09 + (n – 30) * 0,08
+FinSi
+Ecrire "Le prix total est: ", p
+Fin
+
+Exercice 5
+
+Les habitants de Zorglub paient l’impôt selon les règles suivantes :
+les hommes de plus de 20 ans paient l’impôt
+les femmes paient l’impôt si elles ont entre 18 et 35 ans
+les autres ne paient pas d’impôt
+Le programme demandera donc l’âge et le sexe du Zorglubien, 
+et se prononcera donc ensuite sur le fait que l’habitant est imposable.
+
+Variable sex en Caractère
+Variable age en Numérique
+Variables C1, C2 en Booléen
+
+Début
+Ecrire "Entrez le sexe (M/F) : "
+Lire sex
+Ecrire "Entrez l’âge: "
+Lire age
+C1 ← sex = "M" ET age > 20
+C2 ← sex = "F" ET (age > 18 ET age < 35)
+Si C1 ou C2 Alors
+  Ecrire "Imposable"
+Sinon
+  Ecrire "Non Imposable"
+FinSi
+Fin
+
+
+Partie 5
+
+Exercice 1
+
+Ecrire un algorithme qui demande à l’utilisateur un nombre compris entre 1 et 3 
+jusqu’à ce que la réponse convienne.
+
+Variable N en Entier
+
+Debut
+N ← 0
+Ecrire "Entrez un nombre entre 1 et 3"
+TantQue N < 1 ou N > 3
+  Lire N
+    Si N < 1 ou N > 3 Alors
+      Ecrire "Saisie erronée. Recommencez”
+    FinSi
+  FinTantQue
+Fin
+
+Exercice 2
+
+Ecrire un algorithme qui demande un nombre compris entre 10 et 20, jusqu’à ce que la réponse convienne. 
+En cas de réponse supérieure à 20, on fera apparaître un message : 
+« Plus petit ! », et inversement, « Plus grand ! » si le nombre est inférieur à 10.
+
+Variable N en Entier
+
+Debut
+N ← 0
+Ecrire "Entrez un nombre entre 10 et 20"
+TantQue N < 10 ou N > 20
+  Lire N
+  Si N < 10 Alors
+    Ecrire "Plus grand !"
+  SinonSi N > 20 Alors
+    Ecrire "Plus petit !"
+  FinSi
+FinTantQue
+Fin
+
+Exercice 3
+
+Ecrire un algorithme qui demande un nombre de départ, et qui ensuite affiche les dix nombres suivants. 
+Par exemple, si l'utilisateur entre le nombre 17, le programme affichera les nombres de 18 à 27.
+
+Variables N, i en Entier
+
+Debut
+Ecrire "Entrez un nombre : "
+Lire N
+Stop ← N+10
+Ecrire "Les 10 nombres suivants sont : "
+TantQue N < Stop
+   N ← N+1
+   Ecrire N
+FinTantQue
+Fin
+
+Exercice 4
+
+Réécrire l'algorithme précédent, en utilisant cette fois l'instruction Pour
+
+Variables N, i en Entier
+Debut
+Ecrire "Entrez un nombre : "
+Lire N
+Ecrire "Les 10 nombres suivants sont : "
+Pour i ← N + 1 à N + 10
+  Ecrire i
+i Suivant
+Fin
+
+Exercice 5
+
+Ecrire un algorithme qui demande un nombre de départ, 
+et qui ensuite écrit la table de multiplication de ce nombre, 
+présentée comme suit (cas où l'utilisateur entre le nombre 7) :
+
+Variables N, i en Entier
+Debut
+Ecrire "Entrez un nombre : "
+Lire N
+Ecrire "La table de multiplication de ce nombre est : "
+Pour i ← 1 à 10
+  Ecrire N, " x ", i, " = ", n*i
+i Suivant
+Fin
+
+Exercice 6
+
+Ecrire un algorithme qui demande un nombre de départ, 
+et qui calcule la somme des entiers jusqu’à ce nombre. 
+Par exemple, si l’on entre 5, le programme doit calculer :
+
+Variables N, i, Som en Entier
+Debut
+Ecrire "Entrez un nombre : "
+Lire N
+Som ← 0
+Pour i ← 1 à N
+  Som ← Som + i
+i Suivant
+Ecrire "La somme est : ", Som
+Fin
+
+Exercice 7
+
+Ecrire un algorithme qui demande un nombre de départ, et qui calcule sa factorielle.
+NB : la factorielle de 8, notée 8 !, vaut
+1 x 2 x 3 x 4 x 5 x 6 x 7 x 8
+
+Variables N, i, F en Entier
+Debut
+Ecrire "Entrez un nombre : "
+Lire N
+F ← 1
+Pour i ← 2 à N
+  F ← F * i
+i Suivant
+Ecrire "La factorielle est : ", F
+Fin
+
+Exercice 8
+
+Ecrire un algorithme qui demande successivement 20 nombres à l’utilisateur, 
+et qui lui dise ensuite quel était le plus grand parmi ces 20 nombres :
+
+Variables N, i, PG en Entier
+Debut
+PG ← 0
+Pour i ← 1 à 20
+  Ecrire "Entrez un nombre : "
+  Lire N
+  Si i = 1 ou N > PG Alors
+    PG ← N
+  FinSi
+i Suivant
+Ecrire "Le nombre le plus grand était : ", PG
+Fin
+
+Exercice 9
+
+Réécrire l’algorithme précédent, mais cette fois-ci on ne connaît pas d’avance 
+combien l’utilisateur souhaite saisir de nombres. 
+La saisie des nombres s’arrête lorsque l’utilisateur entre un zéro.
+
+Variables N, i, PG, IPG en Entier
+Debut
+N ← 1
+i ← 0
+PG ← 0
+TantQue N <> 0
+  Ecrire "Entrez un nombre : "
+  Lire N
+  i ← i + 1
+  Si i = 1 ou N > PG Alors
+    PG ← N
+    IPG ← i
+  FinSi
+FinTantQue
+Ecrire "Le nombre le plus grand était : ", PG
+Ecrire "Il a été saisi en position numéro ", IPG
+Fin
+
+Exercice 10
+
+Lire la suite des prix (en euros entiers et terminée par zéro) des achats d’un client. 
+Calculer la somme qu’il doit, lire la somme qu’il paye, 
+et simuler la remise de la monnaie en affichant les textes "10 Euros", 
+"5 Euros" et "1 Euro" autant de fois qu’il y a de coupures de chaque sorte à rendre.
+
+Variables E, somdue, M, Reste, Nb10E, Nb5E En Entier
+Debut
+E ← 1
+somdue ← 0
+TantQue E <> 0
+  Ecrire "Entrez le montant : "
+  Lire E
+  somdue ← somdue + E
+FinTantQue
+Ecrire "Vous devez :", somdue, " euros"
+Ecrire "Montant versé :"
+Lire M
+Reste ← M - somdue
+Nb10E ← 0
+TantQue Reste >= 10
+  Nb10E ← Nb10E + 1
+  Reste ← Reste – 10
+FinTantQue
+Nb5E ← 0
+Si Reste >= 5
+  Nb5E ← 1
+  Reste ← Reste – 5
+FinSi
+Ecrire "Rendu de la monnaie :"
+Ecrire "Billets de 10 E : ", Nb10E
+Ecrire "Billets de  5 E : ", Nb5E
+Ecrire "Pièces de 1 E : ", reste
+Fin
+
+Partie 8
+
+Exercice 1
+
+Tableau Truc(5, 12) en Entier
+Debut
+Pour i ← 0 à 5
+  Pour j ← 0 à 12
+    Truc(i, j) ← 0
+  j Suivant
+i Suivant
+Fin
+
+Exercice 2
+
+X(0, 0) = 1
+X(0, 1) = 2
+X(0, 2) = 3
+X(1, 0) = 4
+X(1, 1) = 5
+X(1, 2) = 6
+
+Exercice 3
+
+X(0, 0) = 1
+X(1, 0) = 4
+X(0, 1) = 2
+X(1, 1) = 5
+X(0, 2) = 3
+X(1, 2) = 6
+
+Exercice 4
+
+T(0, 0) = 0
+T(0, 1) = 1
+T(1, 0) = 1
+T(1, 1) = 2
+T(2, 0) = 2
+T(2, 1) = 3
+T(3, 0) = 3
+T(3, 1) = 4
+
+Exercice 5
+
+T(0, 0) = 1
+T(0, 1) = 2
+T(1, 0) = 3
+T(1, 1) = 4
+T(2, 0) = 5
+T(2, 1) = 6
+T(3, 0) = 7
+T(3, 1) = 8
+
+Partie 11
+
+Exercice 1
+
+
+Fonction Sum(a, b, c, d, e) en Numérique
+  Renvoyer a + b + c + d + e
+FinFonction
+
+Exercice 2
+
+Fonction NbVoyelles(Mot en Caractère) en Numérique
+Variables i, nb en Numérique
+nb ← 0
+Pour i ← 1 à Len(Mot)
+  Si Trouve("aeiouy", Mid(Mot, i, 1)) <> 0 Alors
+    nb ← nb + 1
+  FinSi
+i suivant
+Renvoyer nb
+FinFonction
+
+Exercice 3
+
+Fonction Trouve(a en Caractère, b en Caractère) en Numérique
+Variable i en Numérique
+Début
+i ← 1
+TantQue i < Len(a) - Len(b) et b <> Mid(a, i, Len(b))
+  i ← i + 1
+FinTantQue
+Si b <> Mid(a, i, Len(b)) Alors
+  Renvoyer 0
+Sinon
+ 
+FinSi
+Renvoyer i
+FinFonction
+
+Exercice 4
+
+Fonction PurgeSimple(a en Caractère, b en Caractère) en Caractère
+Variable Sortie en Caractère
+Variable i en Numérique
+Début
+Sortie ← ''
+Pour i ← 1 à Len(a)
+   Si Mid(a, i, 1) <> b Alors
+      Sortie ← Sortie & Mid(a, i, 1)
+   FinSi
+i suivant
+Renvoyer Sortie
+FinFonction
+
+Exercice 5
+
+Fonction PurgeMultiple(a en Caractère, b en Caractère) en Caractère
+Variable Sortie en Caractère
+Variable i en Numérique
+Début
+Sortie ← ''
+Pour i ← 1 à Len(a)
+   Si Trouve(b, Mid(a, i, 1)) = 0 Alors
+      Sortie ← Sortie & Mid(a, i, 1)
+   FinSi
+i suivant
+Renvoyer Sortie
+FinFonction
+
+Exercice 6
+
+Procédure TriTableau(T() en Numérique par Référence, n en Numérique par Valeur)
+Variables i, posmini, temp en Numérique
+Début
+Pour i ← 0 à n-2
+   posmini ← i
+   Pour j ← i + 1 à n-1
+      Si t(j) < t(posmini) Alors
+         posmini ← j
+      Finsi
+   j suivant
+   temp ← T(posmini)
+   T(posmini) ← T(i)
+   T(i) ← temp
+i suivant
+FinProcédure
+
+
+
+
+PARTIE 11
+
+Exercice 1
+
+Fonction Sum(a, b, c, d, e) en Numérique
+  Renvoyer a + b + c + d + e
+FinFonction
+
+Exercice 2
+
+Fonction NbVoyelles(Mot en Caractère) en Numérique
+Variables i, nb en Numérique
+nb ← 0
+Pour i ← 1 à Len(Mot)
+  Si Trouve("aeiouy", Mid(Mot, i, 1)) <> 0 Alors
+    nb ← nb + 1
+  FinSi
+i suivant
+Renvoyer nb
+FinFonction
+
+Exercice 3
+
+Fonction Trouve(a en Caractère, b en Caractère) en Numérique
+Variable i en Numérique
+Début
+i ← 1
+TantQue i < Len(a) - Len(b) et b <> Mid(a, i, Len(b))
+  i ← i + 1
+FinTantQue
+Si b <> Mid(a, i, Len(b)) Alors
+  Renvoyer 0
+Sinon
+ 
+FinSi
+Renvoyer i
+FinFonction
+
+Exercice 4
+
+Fonction PurgeSimple(a en Caractère, b en Caractère) en Caractère
+Variable Sortie en Caractère
+Variable i en Numérique
+Début
+Sortie ← ''
+Pour i ← 1 à Len(a)
+   Si Mid(a, i, 1) <> b Alors
+      Sortie ← Sortie & Mid(a, i, 1)
+   FinSi
+i suivant
+Renvoyer Sortie
+FinFonction
+
+Exercice 5
+
+Fonction PurgeMultiple(a en Caractère, b en Caractère) en Caractère
+Variable Sortie en Caractère
+Variable i en Numérique
+Début
+Sortie ← ''
+Pour i ← 1 à Len(a)
+   Si Trouve(b, Mid(a, i, 1)) = 0 Alors
+      Sortie ← Sortie & Mid(a, i, 1)
+   FinSi
+i suivant
+Renvoyer Sortie
+FinFonction
+
+Exercice 7
+Fonction TableauCroissant(T() en Numérique, n en Numérique) en Booléen
+Variable i en Numérique
+Variable Flag en Booléen
+Début
+Flag ← Vrai
+i ← 0
+TantQue Flag et i < n-1
+   Flag ← T(i) < T(i+1)
+   i ← i+1
+FinTantQue
+Renvoyer Flag
+FinFonction
